@@ -1,12 +1,12 @@
 # Portfolio
 ---
-## Natural Language Processing
+## Data Science
 
-### CS224n: Natural Language Processing with Deep Learning
+### CS224n: Market Basket Analysis of an Online Retail
 
-My complete implementation of assignments and projects in [***CS224n: Natural Language Processing with Deep Learning***](http://web.stanford.edu/class/cs224n/) by Stanford (Winter, 2019).
+My first industrial implementation of Data Science training [***Data Science in Retail: Market Basket Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/blob/main/Market%20Basket%20Analysis.R) by DQLab.
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/blob/main/Market%20Basket%20Analysis.R)
 
 **Neural Machine Translation:** An NMT system which translates texts from Spanish to English using a Bidirectional LSTM encoder for the source sentence and a Unidirectional LSTM Decoder with multiplicative attention for the target sentence ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
 
