@@ -19,9 +19,7 @@ To calculate this credit risk, financial institutions usually use a predetermine
 ---
 ### Data Science in Retail: Market Basket Analysis
 
-[![Run in R Studio](https://img.shields.io/badge/RStudio-Run_in_RStudio-blue?logo=RStudio&logoColor=FDBA18)](https://rpubs.com/jcarvallo/market-basket-analysis)
-
-[![Open Notebook](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](projects/Market-Basket-Analysis.Rmd)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Market-Basket-Analysis)
 
 <div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
