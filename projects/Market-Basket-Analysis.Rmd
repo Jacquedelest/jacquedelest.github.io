@@ -1,0 +1,267 @@
+---
+title: 'Data Science in Retail: Market Basket Analysis'
+author: "Jacque de l'est"
+date: "24/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Market Basket Analysis
+
+**Market Basket Analysis** (MBA) is an analysis technique used by retail businesses to find strong product associations, or in other words find product packages that can have a major impact on sales.
+
+The algorithm that can be used in R to do this MBA is a **priori** from the **arules** package. Arules itself stands for *Association Rules*. There are only two data needed, namely *transaction data* and *product data*. With found product packages, businesses can do the following:
+
+-   create product packages with great offers,
+
+-   arrange products with strong associations side by side on store shelves,
+
+-   develop an e-commerce website catalog display,
+
+-   and provide product recommendations.
+
+Talking about product packaging is actually looking for products that have a strong relationship or association in the transaction. The "strong" relationship here will be seen based on the proportion of the number of occurrences of the product combination that will be packaged with the entire transaction.
+
+```{r example of mba, echo=FALSE}
+
+library(arules) #import arules library
+
+read.transactions(
+  file="C:/Users/Jacque de l'est/Documents/Datasets for Data Science/transaksi_dqlab_retail.tsv", 
+  format="single", 
+  sep="\t", 
+  cols=c(1,2), 
+  skip=1
+  ) #read transaction of file
+transaksi #show data transaction
+```
+
+This whole transaction is a combination of 70 product items. And if we analyze it with support conditions of 0.03 (at least 30 times out of 1000 transactions) then the number of combinations produced is 1248. The smaller the support we enter, the more combinations will appear.
+
+With such a large number of combinations for us to analyze, it will be difficult for us if we do it manually. This is the reason why this process needs to be automated with the help of algorithms.
+
+```{r mba model, echo=FALSE}
+
+inspect(apriori(transaksi, parameter = list(support=.03, minlen=2, target='frequent itemsets')))
+```
+
+apriori algorithm is one of the algorithms which is a practical application of Market Basket Analysis (MBA). This algorithm is used to analyze the number of product combinations that occur in retail transactions, which would be difficult and time-consuming if done manually. Technically, the apriori algorithm will look for the level of association between items in many combinations of data groups automatically. This combination can also be compiled with an association rule "If one buys product A, one will buy product B", so this algorithm is categorized as Association Rules in the machine learning field.
+
+Let's review the concept and example of apriori algorithm with the following output display.
+
+![](images/Screenshot%20(69).png)
+
+**Item** is a single product contained in a transaction, such as pet food, syrup, sugar, and tea bags.
+
+**Itemset** is a combination of one or more items contained in a single transaction, such as {Pet Food}, {Sugar, Pet Food}, and {Syrup}.
+
+**Rule** is statement of relationship between itemsets. Usually it can be formulated as "If one buys itemset A, one will buy itemset B". Example:
+
+{Pet Food} =\> {Syrup}
+
+{Pet Food, Teabags} =\> {Syrup}
+
+## Assignment
+
+The dataset we will use is <https://storage.googleapis.com/dqlab-dataset/data_transaksi.txt>. The data in this file has the following two columns:
+
+-   Transaction Code is transaction code, this can be considered a receipt number.
+
+-   Item is the name of the item purchased.
+
+If the transaction data is visualized, it will look as follows.
+
+![](images/item_n_trans_2.png)
+
+Data frame is a data type that is widely used by various algorithms in R. Although later we will process it with another data type called transaction. Well, before going there, it's a good idea to try to read our dataset as it is with the frame data type. We can do this in R by using `read.csv()` function.
+
+```{r}
+
+transaksi_tabular <- read.csv("https://storage.googleapis.com/dqlab-dataset/data_transaksi.txt", sep="\t")
+print(transaksi_tabular)
+```
+
+We can see the output with two columns, namely`Kode.Transaksi` and `Item`. Notice that there are some of the same `Kode.Transaksi` values on several rows, it indicates that they are same transactions. For example, for `Kode.Transaksi` value `#01` there are three rows of data. Each row of data represents one item, so in the transaction there are three items, namely `Teh Celup`, `Sirup` and `Pet Food`.
+
+Reading transaction file with data frame is quite difficult because we need to calculate manually or use other functions for data frame. For this reason, there is another data type that is more appropriate for it, called *transactions* from *arules* package. The function to generating this data type is `read.transactions()`.
+
+```{r}
+
+library(arules)
+transaksi <- read.transactions(
+  file = "https://storage.googleapis.com/dqlab-dataset/data_transaksi.txt", 
+	format = "single", #"single" means that each transaction item is written separately line by line, and this matches the format of our file.
+	sep = "\t", 
+	cols = c(1,2), #index of the columns used. For single format, there must only be two columns, the first column is the transaction code while the second column shows the transaction item. Writing c(1,2) in our example means the first and second columns we use.
+	skip = 1 #the number of rows skipped before starting to read the data. For our dataset, the first row is header and is not required, so we enter 1 as input.
+  )
+transaksi
+```
+
+Result description:
+
+-   `transactions in sparse format` means that transactions are in sparse form (scattered). This may be clearer when visualized in the form of a matrix.
+
+-   `10 transactions (rows)` means our dataset has 10 transactions in total. There are information rows here, this does not mean we have 10 rows of data in our file. Because actually, the file has 23 rows of data.
+
+-   `4 items (columns)` means our dataset has 4 unique items in total.
+
+Items contained in object transactions can be seen in the itemInfo component preceded by the \@ accessor, so write `@iteminfo`. This is useful for viewing a list of unique items contained in the transaction data that we are analyzing.
+
+```{r}
+transaksi@itemInfo
+```
+
+The transactions that have been read by `read.transactions()` can be viewed in detail by using the itemsetInfo component with the \@ accessor, or written in full with `@itemsetInfo`. This list can be useful as a basis for analyzing or validating existing data on retail systems.
+
+```{r}
+transaksi@itemsetInfo
+```
+
+We can display the distribution of items in our entire transaction in the form of a two-dimensional matrix, where the row matrix is the order of the items and the column is the transaction item. The matrix of the transaction object can be viewed from the data component using the \@ accessor, written in full as `@data`.
+
+```{r}
+transaksi@data
+```
+
+Here is an explanation of the output:
+
+-   `4 x 10` means there are 4 items and 10 transactions.
+
+-   `[1,] to [4,]` means the index that represents each item in the transaction.
+
+-   Dot symbol `.` indicates the item is not in the transaction.
+
+-   Straight line symbol `|` indicates that the item is in the transaction.
+
+After knowing how to display transaction list information, transaction codes, items and item distribution in transactions, we should also want to know the items with the number of occurrences in the entire transaction. This information is referred to as item frequency. To generate this information we use the `itemFrequency()` function with the input transaction object, and the result is a named vector or vector that can be accessed by name.
+
+```{r}
+data_item <- itemFrequency(transaksi, type="absolute")
+head(data_item)
+```
+
+Show top three products
+
+```{r, echo=FALSE}
+#sort data_item
+data_item <- sort(data_item, decreasing = TRUE)
+
+#take first three items
+data_item <- data_item[1:3]
+
+#convert data_item to dataframe and rename columns
+data_item <- data.frame("Product.Name"=names(data_item), "Number"=data_item, row.names=NULL)
+
+print(data_item)
+```
+
+Save the top three products in csv file
+
+```{r}
+#write top 3 product file
+write.csv(data_item, file = "top3_item_retail.txt", eol = "\r\n")
+```
+
+Show frequency graphic of items
+
+```{r, echo=FALSE}
+itemFrequencyPlot(transaksi, topN=4)
+```
+
+To see itemset notation better and easier to understand we can use `inspect()` function.
+
+```{r}
+inspect(transaksi)
+```
+
+This is a list of the itemset of our ten transactions. The items column contains the items that occurred in the transaction, and the transactionID contains the transaction code.
+
+It's time we generate *rule* from our transactions. *Rule* is a formula that states the combination of two itemsets. One itemset is on the left side of the rule (left hand side) and the other is on the right side (right hand side) in the following format.
+
+    {itemset lhs} => {itemset rhs}
+
+To generate this rule, we use `apriori()` function.
+
+```{r}
+
+mba <- apriori(transaksi)
+mba
+```
+
+Notice the last line where it says `set of 3 rules`. It means that with the `apriori()` function, we get three rules. `inspect()` function can also be used to view the contents of the association rules generated by `apriori()` function.
+
+```{r}
+
+inspect(mba)
+```
+
+**support**, **confidence**, and **lift** are metrics used to assess the quality of the *rules*. Generally the bigger the better.
+
+If our focus returns to the itemset **lhs** and **rhs** for product packaging, we see that the second rule, namely `{Pet Food} => {Syrup}` is quite interesting. Because **support** 0.4 indicates that this combination is present in 40 percent of the population -- means 4 out of 10 transactions for our dataset. The **lift** value is also above 1, which means that the *rule* has a high association between the itemsets contained in the *rules*. Meanwhile, `{} => {Teabag}` is not interesting because it only contains one item. The remaining *rule*, `{Sugar, Map Food} = > {Syrup}` is too unique -- it is indicated by support 0.1 (10%) which means it is only found in 1 in 10 transactions.
+
+What is the meaning of the rule if we want to apply it? It means that there are several action item options that we can do:
+
+-   recommend to every customer who buys Pet Food to buy Syrup.
+
+-   Pet Food and Syrup display rack can be brought closer.
+
+-   Pet Food and Syrup are packaged together and sell at special prices.
+
+From the inspect output of association rules, we now understand that the object contains a lot of information, including itemsets on the left hand side and right hand side. This is important for business, for example for inventory. We want to answer, are there any previously unsold items in the itemset of the rules generated by *apriori*? If there is, maybe we can package them together so they are more likely to sell. To do this we will filter or subset the rules. There are many ways to do this, one is to use a combination of `inspect()`, `subset()` and `%in%` operator with the following format.
+
+```{r}
+
+inspect(subset(mba, rhs %in% "Sirup"))
+```
+
+Here is an example of the inspect command for **lhs** filter with the Sugar item.
+
+```{r}
+
+inspect(subset(mba, lhs %in% "Gula"))
+```
+
+We can actually do a filter for both sides by using the & operator for AND and the \| operator for OR.
+
+```{r}
+
+inspect(subset(mba, lhs %in% "Pet Food" & rhs%in% "Sirup"))
+```
+
+The following is syntax to regenerate association rules with `apriori()` function, but we will add parameter minimum 0.1 support and 0.5 confidence.
+
+```{r}
+
+mba2 <- apriori(transaksi,parameter = list(supp = 0.1, confidence = 0.5))
+mba2
+```
+
+Notice at the end of the output line, there are 16 rules. More than the previous `apriori()` output which only produces 3 rules.
+
+Now, we try to inspect the new *rules* with filter.
+
+```{r}
+
+inspect(subset(mba2, (lhs %in% "Teh Celup" | rhs %in% "Teh Celup") & lift>1))
+```
+
+The `%in%` operator we previously used is effective. However, this operator is not suitable if we want to filter itemset with logical AND. This means that all items must appear in the selected itemset. For this purpose, we use the `%ain%` operator. An example of a subset that uses `%ain%` is as follows.
+
+```{r}
+
+inspect(subset(mba, (lhs %ain% c("Pet Food", "Gula"))))
+```
+
+So far you have generated rules and understand how quality metrics can be used as the basis for rule selection. But when there are more and more items, the process of choosing based on numbers alone is quite troublesome. Sometimes visualization can be very helpful for analysis in this process. There are many types of visualization, but we will use the graph -- type visualization contained in `arulesViz` package -- a package with special visualizations for association rules.
+
+```{r}
+
+library(arulesViz)
+plot(subset(mba2, lift>1.1), method="graph")
+```
+
+The circles are the meeting point (association) of the existing items, where there are arrows as a connecting lines. Each item is in the form of text. The size of the circle indicates popularity, and the intensity of the color indicates lift. Gula to Sirup, and Pet Food to Sirup have relatively high lift but the support is not too big.
