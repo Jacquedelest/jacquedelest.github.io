@@ -5,7 +5,7 @@ These are my assignments of Data Science in industrial implementation by DQLab t
 
 ### Data Science in Finance: Credit Risk Analysis
 
-[![Open Notebook](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](projects/Credit-Risk-Analysis.Rmd)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis)
 
 [***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.
