@@ -1,15 +1,13 @@
 # Portfolio
 ---
-## Data Science
-
-### CS224n: Data Science in Industry
+## Data Science in Industry
 These are my assignments of Data Science in industrial implementation by DQLab training.
 
-**Market Basket Analysis of an Online Retail**
+### Market Basket Analysis of an Online Retail
 
-My first industrial implementation of Data Science training [***Data Science in Retail: Market Basket Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/blob/main/Market%20Basket%20Analysis.R) with R.
-
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/blob/main/Market%20Basket%20Analysis.R)
+My first industrial implementation of Data Science training [***Data Science in Finance: Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis) with R.
+[![Open Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](projects/Credit Risk Analysis.html)
+[![View on GitHub](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis)
 
 **Neural Machine Translation:** An NMT system which translates texts from Spanish to English using a Bidirectional LSTM encoder for the source sentence and a Unidirectional LSTM Decoder with multiplicative attention for the target sentence ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
 
