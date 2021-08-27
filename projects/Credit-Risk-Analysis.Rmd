@@ -6,7 +6,7 @@ output: html_document
 
 # Theory
 
-## **Credit Risk**
+## Credit Risk
 
 Credit risk is the risk that must be borne by a person or institution when providing credit - usually in the form of money - to other individuals or parties.
 
@@ -18,7 +18,7 @@ The risk cannot be used as principal and interest on the loan, resulting in the 
 
 To minimize the credit risk, a process called credit scoring and credit rating is usually carried out for the borrower. The output of this process will be the basis for determining whether a new loan application is accepted or rejected.
 
-## **Credit Score**
+## Credit Score
 
 Credit score is the risk value assigned to an individual or organization applying for a loan based on the track record of the loan and the payments made. The process of granting a credit score is usually referred to as credit scoring.
 
@@ -26,7 +26,7 @@ Credit score calculations are usually made based on historical data on the lengt
 
 Credit scores usually vary between institutions. However, many later adopt the FICO Score model which has a value range of 300 - 850. The higher the score obtained, the better the level of a person or an institution's ability to repay loans.
 
-## **Risk Rating**
+## Risk Rating
 
 Sometimes many institutions use a risk rating or level of risk. In contrast to the credit score, the higher this rating indicates an increasing risk.
 
@@ -56,7 +56,7 @@ From the several columns are also taken by the analyst to look for patterns of r
 
 -   whether there is an active mortgage or not (kpr_aktif).
 
-## **Analysis and Decision Making Model**
+## Analysis and Decision Making Model
 
 Still related to the previous data example, but with intact data examples - DQLab will provide an illustration of follow-up activities on the data with the following example scenario.
 
@@ -78,13 +78,13 @@ Now, we call these three rules a model to predict the value of the risk rating a
 
 With the model, lending institutions will make decisions faster and with less decision-making errors.
 
-## **Modelling with Decision Tree**
+## Modelling with Decision Tree
 
 From the analysis and decision making model above, the series can actually be modeled with a decision tree structure, as shown visually as below.
 
 ![](images/Decision%20Tree.png "Decision Tree")
 
-## **Decision Tree in Machine Learning**
+## Decision Tree in Machine Learning
 
 Decision Tree is a suitable output model produced by analysts to help identify risk ratings. And fortunately, this model can be automatically generated from machine learning algorithms with historical credit data input. And this has been demonstrated with an example using an algorithm named C5.0.
 
@@ -186,7 +186,7 @@ risk_rating_model <- C5.0(
 summary(risk_rating_model)
 ```
 
-## **Elements of the Decision Tree C5.0**
+## Elements of the Decision Tree C5.0
 
 `Read 800 cases (3 attributes) from undefined.data` means we read 800 rows of data. This is because we took 800 of our 900 data. Then for the 3 attributes section, this means we have three variables, namely:
 
@@ -273,7 +273,7 @@ The last output is a list of determinant variables used in decision tree model.
 
 The output tells the level of importance of the use of each variable. Here, the jumlah_tanggungan ranks first with a value of 100% and the durasi_pinjaman with 72.62%. This also explains why jumlah_tanggungan occupies the root node in our model.
 
-## **Elements of the Decision Tree Plot C5.0**
+## Elements of the Decision Tree Plot C5.0
 
 Here is a picture of the Decision Tree C5.0 plot which has been colored with the following explanation (after the picture).
 
