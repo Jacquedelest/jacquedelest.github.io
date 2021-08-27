@@ -14,7 +14,7 @@ The benefit of this credit scoring is that it minimizes the risk that can occur 
 
 To calculate this credit risk, financial institutions usually use a predetermined standard calculation. However, what is increasingly becoming a trend is calculations using machine learning methods based on historical loan data. The application of machine learning methods in R using a decision tree algorithm called C5.0.
 
-<center><img src="images/C50.png"/></center>
+<center><img src="images/Decision%20Tree.png"/></center>
 
 ---
 ### Data Science in Retail: Market Basket Analysis
