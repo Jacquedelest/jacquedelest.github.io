@@ -1,0 +1,408 @@
+---
+title: 'Data Science in Finance Credit Risk Analysis'
+author: 'Joseph Armando Carvallo'
+output: html_document
+---
+
+# Theory
+
+## **Credit Risk**
+
+Credit risk is the risk that must be borne by a person or institution when providing credit - usually in the form of money - to other individuals or parties.
+
+The risk cannot be used as principal and interest on the loan, resulting in the following losses:
+
+-   disruption of cash flow so that working capital is disrupted.
+
+-   increase operational costs to catch up with the payments (collection).
+
+To minimize the credit risk, a process called credit scoring and credit rating is usually carried out for the borrower. The output of this process will be the basis for determining whether a new loan application is accepted or rejected.
+
+## **Credit Score**
+
+Credit score is the risk value assigned to an individual or organization applying for a loan based on the track record of the loan and the payments made. The process of granting a credit score is usually referred to as credit scoring.
+
+Credit score calculations are usually made based on historical data on the length of delay in payments and those who do not pay at all (bad debt). Bad debt usually results in credit institutions having to confiscate assets or write offs.
+
+Credit scores usually vary between institutions. However, many later adopt the FICO Score model which has a value range of 300 - 850. The higher the score obtained, the better the level of a person or an institution's ability to repay loans.
+
+## **Risk Rating**
+
+Sometimes many institutions use a risk rating or level of risk. In contrast to the credit score, the higher this rating indicates an increasing risk.
+
+In addition, codification is also made simpler than the range of values so that decisions can be taken faster. For example, suppose the use of combinations such as the letters AAA, AA+, P-1, and so on. Or for many internal borrowing institutions, the categorization only uses a small number range, for example 1 to 5.
+
+The following is an example of risk rating data generated based on historical data on the length of the loan repayment process. Pay attention to the risk_rating column where there are numbers 1 to 5 which indicate the lowest to highest risk.
+
+![](images/Screenshot%20(68).png "Table Risk Rating")
+
+For full data set, you can download this dataset at <https://storage.googleapis.com/dqlab-dataset/credit_scoring_dqlab.xlsx.>
+
+The risk_rating column is directly related to the overdue_average column, or the late payment column.
+
+-   If the delay is up to 30 days (0 - 30 days) then it is given a value of 1.
+
+-   If the delay is 31 to 45 days (31 - 45 days) then the score is given a score of 2.
+
+-   etc.
+
+From the several columns are also taken by the analyst to look for patterns of relevance to this rating, namely:
+
+-   revenue in millions per year (pendapatan_setahun_juta).
+
+-   loan duration in months (durasi_pinjaman_bulan).
+
+-   number of dependents (jumlah_tanggungan).
+
+-   whether there is an active mortgage or not (kpr_aktif).
+
+## **Analysis and Decision Making Model**
+
+Still related to the previous data example, but with intact data examples - DQLab will provide an illustration of follow-up activities on the data with the following example scenario.
+
+An analyst will search our data for patterns. Here are the findings:
+
+-   if the number of dependents is more than 4, the risk tendency is very high (ratings 4 and 5).
+
+-   if the loan duration is longer, which is more than 24 months, then the risk tendency also increases (ratings 4 and 5).
+
+From these two findings, the analyst will form rules to guide decision making (decision making models) for new loan applications for the following:
+
+-   if the number of dependents is less than 5 people, and the loan duration is less than 24 months, the rating is given a value of 2 and the loan application is accepted.
+
+-   if the number of dependents is more than 4 people and the loan duration is more than 24 months, then the rating is given a value of 5 and the loan application is rejected.
+
+-   if the number of dependents is less than 5, and the loan duration is less than 36 months, then the rating is given a value of 3 and a loan is given.
+
+Now, we call these three rules a model to predict the value of the risk rating and become the basis for making decisions on new loan applications.
+
+With the model, lending institutions will make decisions faster and with less decision-making errors.
+
+## **Modelling with Decision Tree**
+
+From the analysis and decision making model above, the series can actually be modeled with a decision tree structure, as shown visually as below.
+
+![](images/Decision%20Tree.png "Decision Tree")
+
+## **Decision Tree in Machine Learning**
+
+Decision Tree is a suitable output model produced by analysts to help identify risk ratings. And fortunately, this model can be automatically generated from machine learning algorithms with historical credit data input. And this has been demonstrated with an example using an algorithm named C5.0.
+
+```{r decision tree with C5.0 algorithm}
+library("openxlsx")
+library("C50")
+
+#data preparation
+dataCreditRating <- read.xlsx(xlsxFile = "https://storage.googleapis.com/dqlab-dataset/credit_scoring_dqlab.xlsx")
+dataCreditRating$risk_rating <- as.factor(dataCreditRating$risk_rating) 
+
+#use C5.0 algorithm
+drop_columns <- c("kpr_aktif", "pendapatan_setahun_juta", "risk_rating", "rata_rata_overdue")
+datafeed <- dataCreditRating[ , !(names(dataCreditRating) %in% drop_columns)]
+modelKu <- C5.0(datafeed, as.factor(dataCreditRating$risk_rating))
+summary(modelKu)
+
+```
+
+C5.0 is an naming code algorithm for decision tree. Many other algorithms such as random forest, CART, CHAID, MARS, and others. However, C5.0 is a very popular algorithm because it has very good performance in terms of speed and accuracy. This algorithm is often categorized as classification in machine learning, where the goal is to categorize or classify something -- in our example risk rating -- based on input from other data.
+
+# Assignment
+
+We will predict risk rating from this dataset.
+
+```{r data preparation}
+library("openxlsx")
+
+dataCreditRating <- read.xlsx(xlsxFile = "https://storage.googleapis.com/dqlab-dataset/credit_scoring_dqlab.xlsx")
+str(dataCreditRating)
+```
+
+In the C5.0 algorithm in R, the *class variable* must always be a factor. So if it is read as another data type, it must first be converted to a *factor*.
+
+For our class variable, namely `risk_rating`, it is still read in numeric datatype. To become a class variable used in the C5.0 algorithm, it needs to be converted to a factor. This can be done using the following command.
+
+```{r convert datatype of risk_rating to factor}
+dataCreditRating$risk_rating <- as.factor(dataCreditRating$risk_rating)
+str(dataCreditRating)
+```
+
+Not all input variables that we need to use, especially those that are very closely related to `risk_rating`, namely `rata_rata_overdue`. We will discard these input variables. The process is known as *feature selection*. Since we are using data frame as our input data type for C5.0, we can enter the fields we want to use as filters.
+
+```{r remove some input variables from dataset}
+input_columns <- c("durasi_pinjaman_bulan", "jumlah_tanggungan")
+datafeed <- dataCreditRating[ , input_columns ]
+str(datafeed)
+```
+
+Note: `kode_kontrak` should not be selected because it is unique to the entire data, and is not a determinant for forming patterns. But this is included in order to show that C5.0 has the ability to automatically discard irrelevant input variables.
+
+For the process of forming machine learning models and seeing its accuracy, usually our dataset needs to be divided into two, namely:
+
+**Training set**: is the portion of the dataset used by the algorithm for analysis and as input for model formation.
+
+**Testing set**: is the portion of the dataset that is not used to build the model, but to test the model that has been created.
+
+The formation usually uses a random selection method. We will divide our dataset into 800 rows of data for the training set and 100 rows of data for the testing set.
+
+```{r set training and testing sets}
+#set random index portion for training and testing set
+set.seed(100) #code to uniform random number fetch across R
+indeks_training_set <- sample(900, 800) #create a random sequence with a value range of 1 to 900, but taken as many as 800 values.
+
+#create and show training and testing set
+input_training_set <- datafeed[indeks_training_set,]
+class_training_set <- dataCreditRating[indeks_training_set,]$risk_rating
+input_testing_set <- datafeed[-indeks_training_set,]
+
+str(input_training_set)
+str(class_training_set)
+str(input_testing_set)
+```
+
+With the previous preparations, it is time for us to use the C5.0 algorithm to generate a decision tree model using a function also named C5.0. This function also requires an R package named "C50".
+
+```{r model with C50}
+library("C50")
+risk_rating_model <- C5.0(input_training_set, class_training_set)
+
+#overview model
+summary(risk_rating_model)
+```
+
+In addition to the text model from the previous practice, we can also generate a decision tree in graphical form. And it only takes one code line to do this, which is:
+
+```{r}
+plot(risk_rating_model)
+```
+
+`` Class specified by attribute `outcome' `` means that our class variable is labeled or named as outcome. If we want to change the label that is more representative, namely "Risk Rating", then we can add a control parameter with input in the form of the C5.0Control function and the label parameter as follows.
+
+```{r}
+risk_rating_model <- C5.0(
+  input_training_set, 
+  class_training_set, 
+  control = C5.0Control(label="Risk Rating")
+  )
+summary(risk_rating_model)
+```
+
+## **Elements of the Decision Tree C5.0**
+
+`Read 800 cases (3 attributes) from undefined.data` means we read 800 rows of data. This is because we took 800 of our 900 data. Then for the 3 attributes section, this means we have three variables, namely:
+
+-   input variables; durasi_pinjaman and jumlah_tanggungan.
+
+-   class variable; risk_rating
+
+For `undefined.data`, we can ignore it, because this section should contain .data file information from the original C5.0 program. If you want to know more about this, see <https://www.rulequest.com/see5-unix.html> and focus on preparing data.
+
+![](images/Screenshot%20(66).png)
+
+This is what the coloring means:
+
+-   the blue color is the node and its split state. Connections between nodes (connectors) are written with colons and repeating dots (:...).
+
+-   the red color is the leaf node or its classification.
+
+-   the purple color is the error statistic in the form (class_number / error_number).
+
+```{=html}
+<!-- -->
+```
+    Evaluation on training data (800 cases):
+
+    	    Decision Tree   
+    	  ----------------  
+    	  Size      Errors  
+
+    	     6  180(22.5%)   <<
+
+The information contained in this output is:
+
+-   `800 cases` is the number of rows of data (cases) that are processed.
+
+-   `Size = 6` is the number of leaf nodes (end nodes) of the decision tree.
+
+-   `Errors = 192(24.0%)` , `192` is the number of misclassified records and `24.0%` is the ratio of the entire population.
+
+```{=html}
+<!-- -->
+```
+      (a)   (b)   (c)   (d)   (e)    <-classified as
+    	  ----  ----  ----  ----  ----
+    	   179     1     5     5     6    (a): class 1
+    	    80    30    14     3    12    (b): class 2
+    	           4   258                (c): class 3
+    	           2          73    31    (d): class 4
+    	                      17    80    (e): class 5
+
+**Confusion matrix** or **error matrix** is a table that shows the results of the classification carried out by the model versus (compared) with the actual classification data, thereby showing how accurately the model performs the classification or prediction.
+
+Confusion matrix consists of the same number of columns and rows. Where the row and column headers are representations of class variable values - for our example they are `risk_rating` representations. For our case where there are 5 class variables, then the table is 5 x 5 as shown above.
+
+-   The column headers indicate the class `risk_rating` value predicted or classified by the model, using the labels (a), (b), (c), and so on.
+
+-   The row headers show the class `risk_rating` value in the actual data. Still represented by (a), (b), (c), (d) and (e). However, here, the label information has been given to represent which `risk_rating` value. It can be seen that (a) is a representation of `risk_rating` with a value of 1, (b) is a representation of `risk_rating` with a value of 2, and so on.
+
+-   Each intersection between a column and a row is the predicted information from the class in the value in the column compared to the actual data for the class in the value in the row.
+
+![](images/Screenshot%20(67).png)
+
+Finally, let's try to add up all these numbers:
+
+-   number with correct prediction: 620 (179 + 30 + 258 + 73 + 80)
+
+-   numbers with wrong predictions: 180 (1 + 5 + 5 + 6 + 80 + 14 + 3 + 12 + 4 + 2 + 31 + 17)
+
+The total is 800 data, according to the actual statistics. The number 180 which is an error is also consistent with the output results.
+
+We can change label class variables this syntax below.
+
+    dataCreditRating$risk_rating[dataCreditRating$risk_rating == "1"] <- "satu"
+    dataCreditRating$risk_rating[dataCreditRating$risk_rating == "2"] <- "dua"
+    dataCreditRating$risk_rating[dataCreditRating$risk_rating == "3"] <- "tiga"
+    dataCreditRating$risk_rating[dataCreditRating$risk_rating == "4"] <- "empat"
+    dataCreditRating$risk_rating[dataCreditRating$risk_rating == "5"] <- "lima"
+
+The last output is a list of determinant variables used in decision tree model.
+
+    Attribute usage:
+
+    	100.00%	jumlah_tanggungan
+    	 72.62%	durasi_pinjaman_bulan
+
+The output tells the level of importance of the use of each variable. Here, the jumlah_tanggungan ranks first with a value of 100% and the durasi_pinjaman with 72.62%. This also explains why jumlah_tanggungan occupies the root node in our model.
+
+## **Elements of the Decision Tree Plot C5.0**
+
+Here is a picture of the Decision Tree C5.0 plot which has been colored with the following explanation (after the picture).
+
+![](images/Node.png)
+
+-   The red color shows the nodes and their numbering
+
+    -   red circle 1 is the first level node which is the root node with a determinant variable `jumlah_tanggungan`.
+
+    -   red circle 2 is the second level node with a determinant variable `jumlah_tanggungan`.
+
+    -   red circle 3 is Node 7 which is the leaf node for `risk_rating` classification.
+
+-   The blue color indicates the split condition to the next nodes
+
+    -   blue circle 4 indicates a split condition where the loan duration is less or equal to 24 months.
+
+    -   blue circle 5 indicates a split condition where the loan duration is more than 24 months.
+
+-   The green color indicates the amount of data that has been classified
+
+    -   green circle 6 shows the classification results of 98 data.
+
+    -   the green circle 7 shows the classification results of 129 data.
+
+-   The purple color indicates the classification results and their distribution (in the ratio range between the numbers 0 and 1)
+
+    -   the purple circle number 8 indicates the `risk_rating` of that node is majority 4, and thus the model takes it as its classification. In addition, `risk_rating` 5, 1, and 2 are data that also actually fall into a condition that ends at Node 10.
+
+    -   the purple circle number 9 indicates the `risk_rating` of that node is majority 5, and thus the model takes it as its classification. In addition, `risk_rating` 4, 2, and 1 are data that also actually fall into a condition that ends at Node 11.
+
+## Model Evaluation
+
+The confusion matrix contained in the output of our previous model is the evaluation of the model using a training set. However, we need to evaluate this model for the testing set we have prepared.
+
+Package C50 has a function `predict(model, test_set)`, which can be used to make predictions based on model input and test data. The full function looks as follows.
+
+```{r use model to predict testing set}
+predict(risk_rating_model, input_testing_set)
+```
+
+It can be seen that the prediction results are all in accordance with the position of the data line from the testing set. And this is also in accordance with the `risk_rating` value range, which is 1 to 5.
+
+We will store the `risk_rating` of the initial dataset and this prediction result into the other two column names in the `input_testing_set` data frame. Let's name the column with `risk_rating` and `hasil_prediksi`.
+
+```{r save predicting testing set}
+input_testing_set$risk_rating <- dataCreditRating[-indeks_training_set,]$risk_rating #save the original value of risk_rating into column risk_rating
+
+input_testing_set$hasil_prediksi <- predict(risk_rating_model, input_testing_set) #save the predicted value into column hasil_prediksi
+
+print(input_testing_set)
+```
+
+Note: `-index_training_set` (with a minus sign in front) represents the index numbers for the testing set.
+
+After the prediction results for the testing set are complete, the next step is to try to see which distribution is correct and incorrect prediction. We do this with *confusion matrix*. To create it, we can use `dcast(column ~ row, dataframe)` function from `reshape2` package.
+
+```{r create confusion matrix}
+library("reshape2")
+dcast(hasil_prediksi ~ risk_rating, data=input_testing_set)
+```
+
+The column's headers show the predicted `risk_rating` results, while the row's headers show the actual `risk_rating` data.
+
+To calculate the percentage error, we can first calculate the amount of data with the correct prediction. The result is said to be true if the `risk_rating` data is the same as the `hasil_prediksi`. This if we write it with code is as follows.
+
+    input_testing_set$risk_rating==input_testing_set$hasil_prediksi
+
+The next step, is to filter the data frame with the results earlier with the following syntax.
+
+    input_testing_set[input_testing_set$risk_rating==input_testing_set$hasil_prediksi,]
+
+We will then count the number of rows of this filtering by adding `nrow()` function to the above syntax, as follows.
+
+```{r count correct prediction}
+nrow(input_testing_set[input_testing_set$risk_rating==input_testing_set$hasil_prediksi,])
+```
+
+How about incorrect prediction? We can just add `!=` operator.
+
+```{r count incorrect prediction}
+ nrow(input_testing_set[input_testing_set$risk_rating!=input_testing_set$hasil_prediksi,])
+```
+
+It can be seen that the number of prediction errors is 13. This result is consistent when compared to the number of 107 correct predictions, where the total of both is 120 -- which is the amount of data for the testing set.
+
+## Model Evaluation for New Applicants
+
+The new submission data needs to be formed as a single data frame with input where the names of the variables used must match exactly. From the beginning of the modeling, we use two variables, namely:
+
+-   jumlah_tanggungan
+
+-   durasi_pinjaman_bulan
+
+The both are numeric datatype (numbers). And the following is an example of creating a dataframe with the two variables.
+
+```{r creating a new dataframe for new applicant}
+aplikasi_baru <- data.frame(jumlah_tanggungan = 6, durasi_pinjaman_bulan = 12)
+print(aplikasi_baru)
+```
+
+The new application data that we created previously will predict its `risk_rating` value with the `predict()` function.
+
+```{r predict new applicant}
+predict(risk_rating_model, aplikasi_baru)
+```
+
+This means that the `risk_rating` prediction result for this new application is 4, out of possibilities 1, 2, 3, 4 and 5. This 4 is a fairly high risk value, so this new application may be rejected according to the policy of the loan institution.
+
+Above, we have learned how to predict from a dataframe based on the model that has been created. Now we try to predict from non-existent data from the previous modeled data set.
+
+```{r}
+#Membuat data frame aplikasi baru
+aplikasi_baru <- data.frame(jumlah_tanggungan = 6, durasi_pinjaman_bulan = 64)
+
+#melakukan prediksi
+predict(risk_rating_model, aplikasi_baru)
+```
+
+This means that the `risk_rating` prediction result for this new application is 5, out of possibilities 1, 2, 3, 4 and 5. This 5 is a very high risk value because the duration of the loan is not included in the data carried out by the model.
+
+# Conclusion
+
+We have predicted the credit risk value (`risk_rating`) of the new application data.
+
+The function used is very simple, but we need to be strict with the conditions when preparing the input:
+
+-   the input is a dataframe
+
+-   the fields in the dataframe must match the input used to generate the model
+
+If the conditions are not met, for example, if we have an excess of one column data frame that is not used when providing input to the model, it will result in an error when making predictions.
