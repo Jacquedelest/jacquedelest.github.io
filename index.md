@@ -3,18 +3,18 @@
 ## Data Science in Industry
 These are my assignments of Data Science in industrial implementation by DQLab training.
 
-### Market Basket Analysis of an Online Retail
-
-My first industrial implementation of Data Science training [***Data Science in Finance: Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis) with R.
+### Data Science in Finance: Credit Risk Analysis
 
 [![Open Notebook](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](projects/Credit-Risk-Analysis.Rmd)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis)
 
-**Neural Machine Translation:** An NMT system which translates texts from Spanish to English using a Bidirectional LSTM encoder for the source sentence and a Unidirectional LSTM Decoder with multiplicative attention for the target sentence ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)).
+[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.
 
-**Dependency Parsing:** A Neural Transition-Based Dependency Parsing system with one-layer MLP ([GitHub](https://github.com/chriskhanhtran/CS224n-NLP-Assignments/tree/master/assignments/a3)).
+The benefit of this credit scoring is that it minimizes the risk that can occur to the borrowing institution, which based on the results of this assessment will determine whether the loan application is accepted or rejected by the financial institution.
 
-<center><img src="images/nlp.png"/></center>
+To calculate this credit risk, financial institutions usually use a predetermined standard calculation. However, what is increasingly becoming a trend is calculations using machine learning methods based on historical loan data. The application of machine learning methods in R using a decision tree algorithm called C5.0.
+
+<center><img src="images/C50.png"/></center>
 
 ---
 ### Detect Non-negative Airline Tweets: BERT for Sentiment Analysis
