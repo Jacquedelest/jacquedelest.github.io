@@ -47,10 +47,10 @@ To calculate this credit risk, financial institutions usually use a predetermine
 <center><img src="images/Visual2.png"/></center>
 
 ---
-### Detect Food Trends from Facebook Posts: Co-occurence Matrix, Lift and PPMI
+### Machine Learning: Customer Churn Prediction
 
-[![Open Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](projects/detect-food-trends-facebook.html)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/facebook-detect-food-trends)
+[![Open in Google Colab](https://img.shields.io/badge/GoogleColab-Open_in_Google_Colab-blue?logo=GoogleColab)](https://colab.research.google.com/drive/1wKfQ47Y64Sn8G4-7Uhd8iib1e6snR3P3#scrollTo=iJr0nrEkItwC)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/ML-for-Customer-Churn-Prediction.ipynb)
 
 <div style="text-align: justify">First I build co-occurence matrices of ingredients from Facebook posts from 2011 to 2015. Then, to identify interesting and rare ingredient combinations that occur more than by chance, I calculate Lift and PPMI metrics. Lastly, I plot time-series data of identified trends to validate my findings. Interesting food trends have emerged from this analysis.</div>
 <br>
