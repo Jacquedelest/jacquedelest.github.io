@@ -1,18 +1,18 @@
 # Portfolio
 ---
 ## Data Science in Industry
-These are my assignments of Data Science in industrial implementation by DQLab training.
+These are my Data Science rehearsal of Data Science.
 
 ### Data Science in Finance: Credit Risk Analysis
 
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis)
 
-[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.
+<div style="text-align: justify">[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.</div>
 
-The benefit of this credit scoring is that it minimizes the risk that can occur to the borrowing institution, which based on the results of this assessment will determine whether the loan application is accepted or rejected by the financial institution.
+<div style="text-align: justify">The benefit of this credit scoring is that it minimizes the risk that can occur to the borrowing institution, which based on the results of this assessment will determine whether the loan application is accepted or rejected by the financial institution.</div>
 
-To calculate this credit risk, financial institutions usually use a predetermined standard calculation. However, what is increasingly becoming a trend is calculations using machine learning methods based on historical loan data. The application of machine learning methods in R using a decision tree algorithm called C5.0.
+<div style="text-align: justify">To calculate this credit risk, financial institutions usually use a predetermined standard calculation. However, what is increasingly becoming a trend is calculations using machine learning methods based on historical loan data. The application of machine learning methods in R using a decision tree algorithm called C5.0.</div>
 
 <center><img src="images/Decision%20Tree.png"/></center>
 
