@@ -8,7 +8,7 @@ These are my Data Science rehearsal of Data Science.
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis)
 
-<div style="text-align: justify">[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.</div>
+<div style="text-align: justify"> Credit Risk Analysis is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.</div>
 
 <div style="text-align: justify">The benefit of this credit scoring is that it minimizes the risk that can occur to the borrowing institution, which based on the results of this assessment will determine whether the loan application is accepted or rejected by the financial institution.</div>
 
@@ -22,7 +22,9 @@ These are my Data Science rehearsal of Data Science.
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Market-Basket-Analysis)
 
-<div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
+<div style="text-align: justify">In retail, technological innovation is the automated analysis of thousands to millions of transaction data to find combinations of frequently purchased products together. From various case studies, this combined information can be used to increase sales by 18% to 60%. Besides being effective for increasing sales, this information can also be used to solve stock problems.</div>
+
+<div style="text-align: justify">This analysis process is known as Market Basket Analysis (MBA). And in the world of data science, a popular algorithm to support this process is Apriori.</div>
 
 <center><img src="images/MBA.png"/></center>
 
