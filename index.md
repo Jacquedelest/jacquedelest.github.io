@@ -1,7 +1,7 @@
 # Portfolio
 ---
 ## Data Science in Industry
-These are my Data Science rehearsal of Data Science.
+These are my Data Science rehearsals.
 
 ### Data Science in Finance: Credit Risk Analysis
 
@@ -34,7 +34,11 @@ These are my Data Science rehearsal of Data Science.
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/customer-segmentation)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Customer-Segmentation)
 
-<div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
+<div style="text-align: justify">All businesses or business entities must have customers. Customers have specific characteristics, for example age 36 years and female. Actually, these characteristics can be further divided in more detail by profession, for example housewives and career women. And it is still further divided in more detail based on total spending for a year, province of residence, and others.</div>
+
+<div style="text-align: justify">The more you recognize customer characteristics, the easier it will be to innovate products with the needs of these characters and conduct marketing communications. This process of dividing customer characteristics is called Customer segmentation. If this process is carried out on customer data manually, it will be difficult and time consuming, especially with large amounts and variations of data.</div>
+
+<div style="text-align: justify">Fortunately, there are currently many automation processes for customer segmentation using various machine learning algorithms. Two of them are k-means and k-modes. Data Science in Marketing: Customer Segmentation focuses on understanding and using these two algorithms with a practical approach using the R programming language.</div>
 
 <center><img src="images/audience-segmentation-push-notifications.png"/></center>
 
