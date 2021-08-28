@@ -6,9 +6,9 @@ These are my assignments of Data Science in industrial implementation by DQLab t
 ### Data Science in Finance: Credit Risk Analysis
 
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis)
 
-[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.
+[***Credit Risk Analysis***](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis) is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called *credit scoring* and *credit rating* to the borrowers.
 
 The benefit of this credit scoring is that it minimizes the risk that can occur to the borrowing institution, which based on the results of this assessment will determine whether the loan application is accepted or rejected by the financial institution.
 
@@ -20,7 +20,7 @@ To calculate this credit risk, financial institutions usually use a predetermine
 ### Data Science in Retail: Market Basket Analysis
 
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Market-Basket-Analysis)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Market-Basket-Analysis)
 
 <div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
 
@@ -30,7 +30,7 @@ To calculate this credit risk, financial institutions usually use a predetermine
 ### Data Science in Marketing: Customer Segmentation
 
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/customer-segmentation)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Customer-Segmentation)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Customer-Segmentation)
 
 <div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
 
@@ -40,7 +40,7 @@ To calculate this credit risk, financial institutions usually use a predetermine
 ### Data Science in Finance: Dimension Reduction
 
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/dimension-reduction)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-DQLab-dengan-R/tree/Dimension-Reduction)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Dimension-Reduction)
 
 <div style="text-align: justify">The release of Google's BERT is described as the beginning of a new era in NLP. In this notebook I'll use the HuggingFace's transformers library to fine-tune pretrained BERT model for a classification task. Then I will compare BERT's performance with a baseline model, in which I use a TF-IDF vectorizer and a Naive Bayes classifier. The transformers library helps us quickly and efficiently fine-tune the state-of-the-art BERT model and yield an accuracy rate 10% higher than the baseline model.</div>
 
