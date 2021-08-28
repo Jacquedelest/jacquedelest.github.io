@@ -52,9 +52,12 @@ To calculate this credit risk, financial institutions usually use a predetermine
 [![Open in Google Colab](https://img.shields.io/badge/GoogleColab-Open_in_Google_Colab-blue?logo=GoogleColab)](https://colab.research.google.com/drive/1wKfQ47Y64Sn8G4-7Uhd8iib1e6snR3P3#scrollTo=iJr0nrEkItwC)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/ML-for-Customer-Churn-Prediction.ipynb)
 
-<div style="text-align: justify">First I build co-occurence matrices of ingredients from Facebook posts from 2011 to 2015. Then, to identify interesting and rare ingredient combinations that occur more than by chance, I calculate Lift and PPMI metrics. Lastly, I plot time-series data of identified trends to validate my findings. Interesting food trends have emerged from this analysis.</div>
+<div style="text-align: justify">I did Machine Learning Modelling for DQlab Telco customers churn using dataset from June 2020. The steps to be taken are Performing Exploratory Data Analysis, Doing Data Pre-Processing, Doing Machine Learning Modeling, and Determining the Best Model.</div>
+
+<div style="text-align: justify">The algorithms tested are Logistic Regression, Random Forest Classifier, and Gradient Boosting Classifier</div>
+
 <br>
-<center><img src="images/fb-food-trends.png"></center>
+<center><img src="images/Appropriate%20fitting%20algorithm%20for%20DQLab%20Telco.png"></center>
 <br>
 
 ---
