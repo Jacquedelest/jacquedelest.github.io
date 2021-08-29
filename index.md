@@ -84,7 +84,7 @@ These are my Data Science rehearsals.
 ---
 ## Community: Austronesian Languages
 
-[![View My Online Community](https://img.shields.io/badge/Facebook-View_My_Online_Community-blue?logo=Facebook&labelColor=FF0000)](https://web.facebook.com/groups/austronesian.languages)
+[![View My Online Community](https://img.shields.io/badge/Facebook-View_My_Online_Community-blue?logo=Facebook)](https://web.facebook.com/groups/austronesian.languages)
 
 <div style="text-align: justify">Besides Data Science, I also have a great passion for linguistics. Some friend and I manage a Facebook group, Austronesian Languages (Cognation & Comparing). Our group is online community for Austronesian speakers and enthusiasts to share knowledges about Austronesian languages.</div>
 
