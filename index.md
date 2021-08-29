@@ -69,14 +69,14 @@ These are my Data Science rehearsals.
 <br>
 
 ---
-### Detect Spam Messages: TF-IDF and Naive Bayes Classifier
+### Data Analytics: Business Decision Research
 
-[![Open Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](projects/detect-spam-nlp.html)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/chriskhanhtran/detect-spam-messages-nlp/blob/master/detect-spam-nlp.ipynb)
+[![Open in Google Colab](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](https://colab.research.google.com/drive/1fyjZEY_tN4MgpC-SOm5F1gEjSokHeB02#scrollTo=xR1ee1U7FV24)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/Business_Decision_Research.ipynb)
 
 <div style="text-align: justify">In order to predict whether a message is spam, first I vectorized text messages into a format that machine learning algorithms can understand using Bag-of-Word and TF-IDF. Then I trained a machine learning model to learn to discriminate between normal and spam messages. Finally, with the trained model, I classified unlabel messages into normal or spam.</div>
 <br>
-<center><img src="images/detect-spam-nlp.png"/></center>
+<center><img src="images/Trend.png"/></center>
 <br>
 
 ---
