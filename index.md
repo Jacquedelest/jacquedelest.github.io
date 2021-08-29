@@ -1,5 +1,6 @@
-<div style="text-align: justify"><b>Portfolio</b></div>
+<div style="text-align: center"><size = 15><b>Portfolio</b></size></div>
 ---
+
 ## Data Science in Industry
 These are my Data Science rehearsals.
 
