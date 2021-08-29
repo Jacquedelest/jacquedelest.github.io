@@ -74,7 +74,9 @@ These are my Data Science rehearsals.
 [![Open in Google Colab](https://img.shields.io/badge/Jupyter-Open_Notebook-blue?logo=Jupyter)](https://colab.research.google.com/drive/1fyjZEY_tN4MgpC-SOm5F1gEjSokHeB02#scrollTo=xR1ee1U7FV24)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/Business_Decision_Research.ipynb)
 
-<div style="text-align: justify">In order to predict whether a message is spam, first I vectorized text messages into a format that machine learning algorithms can understand using Bag-of-Word and TF-IDF. Then I trained a machine learning model to learn to discriminate between normal and spam messages. Finally, with the trained model, I classified unlabel messages into normal or spam.</div>
+<div style="text-align: justify">DQLab Sport Center is a store that sells various sports needs such as jackets, clothes, bags, and shoes. The shop has been selling since 2013, so it has had regular customers for a long time, and is still trying to get new customers to this day. In early 2019, the store manager hired a junior Data Analyst to help solve the problem in his store, namely the decline in customers who buy back to his store. The Junior Data Analyst was also entrusted with processing the store's transaction data. The store manager defines that a customer is no longer called a customer (churn) when he has not transacted to his store again up to the last 6 months from the last available data update.</div>
+
+<div style="text-align: justify">So, the store manager and junior Data Analyst at one of the branches asked me to help out with their market research with the data and issues. It's good that while I'm working, I make my work report step by step so that the data analysis process can be known to solve this case.</div>
 <br>
 <center><img src="images/Trend.png"/></center>
 <br>
