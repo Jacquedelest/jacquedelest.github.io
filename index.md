@@ -1,11 +1,11 @@
-# Portfolio
+<div style="text-align: justify"><b>Portfolio</b></div>
 ---
 ## Data Science in Industry
 These are my Data Science rehearsals.
 
 ### Data Science in Finance: Credit Risk Analysis
 
-[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis)
 
 <div style="text-align: justify"> Credit Risk Analysis is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called credit scoring and credit rating to the borrowers.</div>
@@ -19,7 +19,7 @@ These are my Data Science rehearsals.
 ---
 ### Data Science in Retail: Market Basket Analysis
 
-[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Market-Basket-Analysis)
 
 <div style="text-align: justify">In retail, technological innovation is the automated analysis of thousands to millions of transaction data to find combinations of frequently purchased products together. From various case studies, this combined information can be used to increase sales by 18% to 60%. Besides being effective for increasing sales, this information can also be used to solve stock problems.</div>
@@ -31,7 +31,7 @@ These are my Data Science rehearsals.
 ---
 ### Data Science in Marketing: Customer Segmentation
 
-[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/customer-segmentation)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/customer-segmentation)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Customer-Segmentation)
 
 <div style="text-align: justify">All businesses or business entities must have customers. Customers have specific characteristics, for example age 36 years and female. Actually, these characteristics can be further divided in more detail by profession, for example housewives and career women. And it is still further divided in more detail based on total spending for a year, province of residence, and others.</div>
@@ -45,7 +45,7 @@ These are my Data Science rehearsals.
 ---
 ### Data Science in Finance: Dimension Reduction
 
-[![View on RStudio](https://img.shields.io/badge/RStudio-Open_Notebook-blue?logo=RStudio)](https://rpubs.com/jcarvallo/dimension-reduction)
+[![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/dimension-reduction)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Dimension-Reduction)
 
 <div style="text-align: justify">The C5.0 decision tree algorithm can predict a customer's credit scoring or rating. I classify credit scoring or rating accurately by using Principal Component Analysis statistical techniques. In this section, I use the C5.0 decision tree algorithm to predict the credit scoring or rating of a customer.</div>
