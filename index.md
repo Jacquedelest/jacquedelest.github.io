@@ -32,7 +32,7 @@
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/customer-segmentation)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Customer-Segmentation)
 
-<div style="text-align: justify">In this project, I had customer segmentation with R. The algorithm used in this project is the k-means algorithm. The several steps I had before implementing the algorithm were preparing the data, normalizing the <d>NilaiBelanjaSetahun</d> column, selecting the variables to be used, and finding the optimal cluster for k-means.</div>
+<div style="text-align: justify">In this project, I had customer segmentation with R. The algorithm used in this project is the k-means algorithm. The several steps I had before implementing the algorithm were preparing the data, normalizing the <i>NilaiBelanjaSetahun</i> column, selecting the variables to be used, and finding the optimal cluster for k-means.</div>
 
 <div style="text-align: justify">The ultimate goal of this project is to find customer clusters and name them according to characteristics of the clusters.</div>
 
