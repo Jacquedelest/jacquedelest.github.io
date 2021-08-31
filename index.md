@@ -11,13 +11,7 @@
 
 <div style="text-align: justify">The goal of this project is to use a decision tree algorithm to find rules, classify classes of credit customers, and apply models to new data.</div>
 
-<div style="text-align: justify">
-  Language: R
-  
-  Algorithm : Decision Tree from library C50
-</div>
-
-<center><img src="images/Decision%20Tree.png"/></center>
+<center><img src="images/Credit%20Risk%20Decision%20Tree.png"/></center>
 
 ---
 
