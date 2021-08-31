@@ -20,9 +20,9 @@
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/market-basket-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Market-Basket-Analysis)
 
-<div style="text-align: justify">In retail, technological innovation is the automated analysis of thousands to millions of transaction data to find combinations of frequently purchased products together. From various case studies, this combined information can be used to increase sales by 18% to 60%. Besides being effective for increasing sales, this information can also be used to solve stock problems.</div>
+<div style="text-align: justify">Market Basket Analysis (MBA) is an analysis technique used by retail businesses to find strong product associations, or in other words find product packages that can have a major impact on sales.</div>
 
-<div style="text-align: justify">This analysis process is known as Market Basket Analysis (MBA). And in the world of data science, a popular algorithm to support this process is Apriori.</div>
+<div style="text-align: justify">In this project, I was asked to analyze the combination of DQLab Retail transaction products using the a priori algorithm. The purpose of this analysis is to obtain the association rule dataset.</div>
 
 <center><img src="images/MarketBasketAnalysis.png"/></center>
 
@@ -37,8 +37,6 @@
 <div style="text-align: justify">The more you recognize customer characteristics, the easier it will be to innovate products with the needs of these characters and conduct marketing communications. This process of dividing customer characteristics is called Customer segmentation. If this process is carried out on customer data manually, it will be difficult and time consuming, especially with large amounts and variations of data.</div>
 
 <div style="text-align: justify">Fortunately, there are currently many automation processes for customer segmentation using various machine learning algorithms. Two of them are k-means and k-modes. Data Science in Marketing: Customer Segmentation focuses on understanding and using these two algorithms with a practical approach using the R programming language.</div>
-
-<center><img src="images/audience-segmentation-push-notifications.png"/></center>
 
 ---
 
