@@ -24,7 +24,7 @@
 
 <div style="text-align: justify">This analysis process is known as Market Basket Analysis (MBA). And in the world of data science, a popular algorithm to support this process is Apriori.</div>
 
-<center><img src="images/MBA.png"/></center>
+<center><img src="images/MarketBasketAnalysis.png"/></center>
 
 ---
 ## Data Science in Marketing: Customer Segmentation
