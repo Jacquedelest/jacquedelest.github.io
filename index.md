@@ -7,11 +7,14 @@
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/credit-risk-analysis)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Credit-Risk-Analysis)
 
-<div style="text-align: justify"> Credit Risk Analysis is a technique to find the value of loan risk that can be certified by the borrowers. In this technique, a risk assessment process is usually carried out before a loan is given, which is called credit scoring and credit rating to the borrowers.</div>
-
 <div style="text-align: justify">In this project, I was asked to analyze the credit customer dataset from DQLab and built a model for the dataset. The analysis I did was to look at the relationship between the variables and the risk_rating to find the risk tendency. The variables were going to be used for modelling. The model used was a decision tree algorithm from the C50 library.</div>
 
 <div style="text-align: justify">The goal of this project is to use a decision tree algorithm to find rules, classify classes of credit customers, and apply models to new data.</div>
+
+<div style="text-align: justify">
+  Language: R
+  Algorithm : Decision Tree from library C50
+</div>
 
 <center><img src="images/Decision%20Tree.png"/></center>
 
