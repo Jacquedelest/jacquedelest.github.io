@@ -43,11 +43,11 @@
 [![View on RStudio](https://img.shields.io/badge/RStudio-Open_RStudio-blue?logo=RStudio)](https://rpubs.com/jcarvallo/dimension-reduction)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-R/tree/Dimension-Reduction)
 
-<div style="text-align: justify">The C5.0 decision tree algorithm can predict a customer's credit scoring or rating. I classify credit scoring or rating accurately by using Principal Component Analysis statistical techniques. In this section, I use the C5.0 decision tree algorithm to predict the credit scoring or rating of a customer.</div>
+<div style="text-align: justify">In this reduction dimension, I learned about the theory of principal component analysis and exercises its application to credit scoring. Principal component analysis is a technique used to reduce the number of unnecessary variables as input to the algorithm without compromising the quality of the prediction.</div>
 
-<div style="text-align: justify">The data processing method and the prediction results use machine learning techniques to produce models that can be implemented in the financial sector later.</div>
+<div style="text-align: justify">In the practice, the several subject matters I did were data standardization, the correlation matrix, eigenvalues, and eigenvectors calculation, selection of the number of principal components, and data visualization.</div>
 
-<center><img src="images/Visual2.png"/></center>
+<center><img src="images/DimensionReduction.png"/></center>
 
 ---
 ## Machine Learning: Customer Churn Prediction
