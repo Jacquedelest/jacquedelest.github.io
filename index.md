@@ -60,7 +60,7 @@
 <div style="text-align: justify">The algorithms tested are Logistic Regression, Random Forest Classifier, and Gradient Boosting Classifier</div>
 
 <br>
-<center><img src="images/Appropriate%20fitting%20algorithm%20for%20DQLab%20Telco.png"></center>
+<center><img src="images/ChurnPredictionML.png"></center>
 <br>
 
 ---
