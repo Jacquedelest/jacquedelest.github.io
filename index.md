@@ -74,7 +74,7 @@
 
 <div style="text-align: justify">So, the store manager and junior Data Analyst at one of the branches asked me to help out with their market research with the data and issues. It's good that while I'm working, I make my work report step by step so that the data analysis process can be known to solve this case.</div>
 <br>
-<center><img src="images/Trend.png"/></center>
+<center><img src="images/BusinessDecisionResearch.png"/></center>
 <br>
 
 ---
