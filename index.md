@@ -70,9 +70,9 @@
 [![Open in Google Colab](https://img.shields.io/badge/GoogleColab-Open_in_GoogleColab-blue?logo=GoogleColab)](https://colab.research.google.com/drive/1fyjZEY_tN4MgpC-SOm5F1gEjSokHeB02#scrollTo=xR1ee1U7FV24)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/Business_Decision_Research.ipynb)
 
-<div style="text-align: justify">The store manager and junior Data Analyst of DQLab Sport Center asked me to help out with their market research with the data and issues. While I was working, I created my work report step by step so that the data analysis process can be known to solve this case.</div>
+<div style="text-align: justify">The store manager and junior Data Analyst of DQLab Sport Center asked me to help out with their market research with the data and issues. While I was working, I created my work report step by step so that the data analysis process could be known to solve this case.</div>
 
-<div style="text-align: justify">I wanted to have a churn analysis of products in one of the branches. My goal is to provide recommendations and strategies to reduce customer churn.</div>
+<div style="text-align: justify">I wanted to have a churn analysis of products in one of the branches. My goal was to provide recommendations and strategies to reduce customer churn.</div>
 <br>
 <center><img src="images/BusinessDecisionResearch.png"/></center>
 <br>
