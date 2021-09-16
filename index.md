@@ -53,7 +53,7 @@
 ## Machine Learning: Customer Churn Prediction
 
 [![Open in Google Colab](https://img.shields.io/badge/GoogleColab-Open_in_Google_Colab-blue?logo=GoogleColab)](https://colab.research.google.com/drive/1wKfQ47Y64Sn8G4-7Uhd8iib1e6snR3P3#scrollTo=iJr0nrEkItwC)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/ML-for-Customer-Churn-Prediction.ipynb)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/jacquedelest.github.io/blob/master/projects/ML_for_Customer_Churn_Prediction.ipynb)
 
 <div style="text-align: justify">I did Machine Learning Modelling for DQlab Telco customers churn using dataset from June 2020. The steps to be taken are Performing Exploratory Data Analysis, Doing Data Pre-Processing, Doing Machine Learning Modeling, and Determining the Best Model.</div>
 
@@ -68,7 +68,7 @@
 ## Data Analytics: Business Decision Research
 
 [![Open in Google Colab](https://img.shields.io/badge/GoogleColab-Open_in_GoogleColab-blue?logo=GoogleColab)](https://colab.research.google.com/drive/1fyjZEY_tN4MgpC-SOm5F1gEjSokHeB02#scrollTo=xR1ee1U7FV24)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/Latihan-dengan-Python/blob/main/Business_Decision_Research.ipynb)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/jacquedelest.github.io/blob/master/projects/Business_Decision_Research.ipynb)
 
 <div style="text-align: justify">The store manager and junior Data Analyst of DQLab Sport Center asked me to help out with their market research with the data and issues. While I was working, I created my work report step by step so that the data analysis process could be known to solve this case.</div>
 
