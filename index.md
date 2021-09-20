@@ -79,6 +79,22 @@
 
 ---
 
+## Data Visualization: Jakarta Bus Passengers in 2017
+
+[![Open in Tableau](https://img.shields.io/badge/Tableau-Open_in_Tableau-blue?logo=Tableau)](https://public.tableau.com/shared/6KR2RD6YW?:display_count=n&:origin=viz_share_link)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/jacquedelest.github.io/blob/master/projects/Penumpang%20Bus%20Jakarta%202017.twb)
+
+<div style="text-align: justify">I did a data visualization of Jakarta bus passenger data in 2017 by the Jakarta government to see the statistics.</div>
+
+<div style="text-align: justify">What I wanted to see is the comparison between the number of bus passengers and the buses in operation, the average growth in the number of bus passengers during the year, and the number of buses operating in certain months.</div>
+<br>
+<center><img src="images/Statistic%201%20-%20Tableau.png"/></center>
+<center><img src="images/Statistic%202%20-%20Tableau.png"/></center>
+<br>
+
+
+---
+
 ## Community: Austronesian Languages
 
 [![View My Online Community](https://img.shields.io/badge/Facebook-View_My_Online_Community-blue?logo=Facebook)](https://web.facebook.com/groups/austronesian.languages)
