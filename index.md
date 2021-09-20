@@ -81,7 +81,7 @@
 
 ## Data Visualization: Jakarta Bus Passengers in 2017
 
-[![Open in Tableau](https://img.shields.io/badge/Tableau-Open_in_Tableau-blue?logo=Tableau)](https://public.tableau.com/shared/6KR2RD6YW?:display_count=n&:origin=viz_share_link)
+[![Open in Tableau](https://img.shields.io/badge/Tableau-Open_in_Tableau-blue?logo=Tableau)](https://public.tableau.com/views/PenumpangBusJakarta2017/Story1?:language=en-US&:display_count=n&:origin=viz_share_link)
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?logo=GitHub)](https://github.com/Jacquedelest/jacquedelest.github.io/blob/master/projects/Penumpang%20Bus%20Jakarta%202017.twb)
 
 <div style="text-align: justify">I did a data visualization of Jakarta bus passenger data in 2017 by the Jakarta government to see the statistics.</div>
